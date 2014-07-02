@@ -1,39 +1,43 @@
 <html>
 <head>
-	<title></title>
+	<title>Angry Gandalf</title>
 </head>
 <body>
-	<h2>Angry Gandalf</h2>
-	<input type="text" placeholder="which gandalf?" id="gandalfInput" />Submit</button>
-	<div id="message"></div>
 
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js">
-</script>
-<script>
+  <input type='text' id="name" />
+  <button id="submitInput">Submit</button>
+  <div id="gandalfMessage"></div>
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script type="text/javascript">
 	/**
 	 * Exercise 0: angryGandalf (example)
 	**/
-	funtion angryGandalf(type) {
-		// Define angryGandalf with input parameters
-			  // Define the variables needed
 
-			  // Run conditional on type for 'grey' and 'white'
-			  if (type ==='grey') {
-			  	return = "YOU...SHALL NOT... PASS!";
+	var angryGandalf = function(type) {
+
+		var message;
+
+			if (type ==='grey') {
+			  	message = "YOU...SHALL NOT... PASS!";
 			  }
-//Run conditional if neither gray nor white
 			else if (type ==='white') {
-			  	return = "You merely passed me to your demise.";
+			  	message = "You merely passed me to your demise.";
 			  }
-			  // Return message
-			  else {
-			  	return = "I don't think I'm Gandalf anymore.";
+			else {
+			  	message = "I don't think I'm Gandalf anymore.";
 			  }
-			  return message;
+			return message;
 	}
 	console.assert(angryGandalf('grey') === "YOU...SHALL NOT... PASS!");
 	console.assert(angryGandalf('white') === "You merely passed me to your demise.");
 	console.assert(angryGandalf(2) === "I don't think I'm Gandalf anymore.");
+
+	    $("#submitInput").on('click', function() {
+      var name = $("#name").val();
+      var message = angryGandalf(name);
+      $("#gandalfMessage").html(message);
+    });
 </script>
 </body>
 </html>
