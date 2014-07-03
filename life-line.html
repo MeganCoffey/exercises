@@ -6,12 +6,14 @@
 
     <h1>Describe who you are:</h1>
 
-        Job: <input type="text" id="w"><br>
-        Hometown: <input type="text" id="x"><br>
-        Partner's Name: <input type="text" id="y"><br>
-        Number of Childern: <input type="text" id="z"><br><br>
+      <form>
+        Job: <input type="text" id="jobTitle" placeholder="Job Title"><br>
+        Hometown: <input type="text" id="hometown" placeholder="Hometown"><br>
+        Partner's Name: <input type="text" id="partner" placeholder="Partner"><br>
+        Number of Childern: <input type="text" id="children" placeholder="Number of Children"><br><br>
         <button id="submit">Submit</button>
-        <div id="gandalfMessage"></div>
+      </form>
+        <div id="returnmessage"></div>
 
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
   <script type="text/javascript">
@@ -20,27 +22,36 @@
  * @description takes children, partner's name, hometown, and job
  * @returns 'You are a W from X and married to Y  with Z kids.'
 **/
-var tellFortune = function (w, x, y, z) {
-  return("You are a " + w + " from " + x + " and married to " + y + " with " + z + " kids.");
-};
-tellFortune('bball player', 'Spain', 'Shaq', '3');
-tellFortune('stunt double', 'Japan', 'Ryan Gosling', '3000');
-tellFortune('Elvis impersonator', 'Russia', 'The Oatmeal', '0');
-
-	   $("#submit").on('click', function() {
-       var w = $("#w").val();
-       var x = $("#x").val();
-       var y = $("#y").val();
-       var z = $("#z").val();
-      var message = tellFortune(w, x, y, z);
-      $("#gandalfMessage").html(message);
-    });
 
 // Create function with name tellFortune and appropriate parameters
+var lifeLine = function( jobTitle, hometown, partner, children ) {
+  // var whateverYouWant = "Youare a" + 
+  // parameters are what you "find"
+  // returning the string is not always preferred
+// get first letter and make it lower case
+  var firstLetter = jobTitle.charAt(0).toLowerCase();
+  if(firstLetter === 'a' || firstLetter === 'e' || firstLetter === 'i' || firstLetter === 'o' || firstLetter === 'u') {
+ 
+          var a = 'an ';
+ 
+      }  else {
+    var a = 'a';
+  }
 
-// console.assert(lifeLine('bball player', 'Spain', 'Shaq', 3) === 'You are a bball player from Spain and married to Shaq  with 3 kids.' ); 
-// console.assert(lifeLine('stunt double', 'Japan', 'Ryan Gosling', 3000) === 'You are a stunt double from Japan and married to Ryan Gosling  with 3000 kids.');
-// console.assert(lifeLine('Elvis impersonator', 'Russia', 'The Oatmeal', 0) === 'You are a Elvis impersonator from Russia and married to The Oatmeal  with 0 kids.') ;
+  var tellFortune = "You are a " + jobTitle + " from " + hometown + " and married to " + partner + " with " + children + " kids.";
+  return tellFortune;
+};
+
+	   $("#submit").on('click', function(e) {
+      e.preventDefault();
+       var jobTitle = $("#jobTitle").val();
+       var hometown = $("#hometown").val();
+       var partner = $("#partner").val();
+       var children = $("#children").val();
+       var message= lifeLine(jobTitle, hometown, partner, children);
+       $("#returnmessage").html(message);
+    });
+
 </script>
 </body>
 </html>
