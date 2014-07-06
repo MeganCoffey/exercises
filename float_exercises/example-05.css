@@ -1,0 +1,52 @@
+/* ---------------------------------------------------------- */
+/* Float Examples for MakerSquare Front-End Class ----------- */
+/* created by Elyse Holladay @elyseholladay ----------------- */
+/* ---------------------------------------------------------- */
+
+/* Example 05 */
+
+.container {
+	width: 100%;
+	margin: 0 auto;
+}
+
+.header {}
+/* hint! what do you have to add here? */
+
+.header {
+	overflow: auto;
+}
+
+.logo {
+	width: 100px;
+	float: left;
+}
+
+.navigation {
+	width: 200px;
+	float: right;
+}
+.sidebar {
+	width: 200px;
+	height: 300px;
+	margin-right: 100px;
+	float: left;
+}
+
+.main-content {
+	overflow: auto;
+}
+
+.sub-content {
+	width: 600px;
+	height: 125px;
+	margin-bottom: 10px;
+	float: right;
+}
+.sub-content-2 {
+	height: 125px;
+	width: 600px;
+	float: right;
+}
+
+.footer {}
