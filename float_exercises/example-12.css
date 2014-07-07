@@ -1,0 +1,65 @@
+/* ---------------------------------------------------------- */
+/* Float Examples for MakerSquare Front-End Class ----------- */
+/* created by Elyse Holladay @elyseholladay ----------------- */
+/* ---------------------------------------------------------- */
+
+/* Example 12 */
+
+@import url(http://fonts.googleapis.com/css?family=Montserrat);
+
+
+
+.container {
+	font-family: 'Montserrat', sans-serif;
+	width: 500px;
+	margin: auto; 
+	/*the margin centers the pages*/
+}
+/* To Do List */
+.todolist {
+	background-color: white;
+	border:2px solid gray;
+}
+
+/* Individual Todo */
+.todo {
+	padding: 10px;
+	height: 100px;
+	padding-top: 20px;
+	margin-bottom: 20px;
+}
+
+/* Priority icon dot */
+.icon {
+	float: left;
+	padding-right: 15px;
+	padding-left: 25px;
+}
+
+/* Info of the todo, title and date */
+.todo-info {
+	float: left;
+}
+
+/* Title */
+.todo-title {
+	font-size: 30px;
+}
+
+/* Date */
+.todo-date {}
+
+/* Checkboxes! */
+.check {
+	float: right;
+	margin: 25px 0 25px 0;
+	padding-right: 15px;
+
+}
+.line-separator {
+	border-bottom:1px solid gray;
+	margin-left: 25px;
+	margin-right: 25px;
+}
+input[type=checkbox] {
+}

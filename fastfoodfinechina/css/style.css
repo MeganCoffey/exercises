@@ -1,0 +1,91 @@
+@import url(http://fonts.googleapis.com/css?family=Cherry+Swash:400,700);
+
+
+* {
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;         /* Opera/IE 8+ */
+
+}
+
+body {
+font-family: 'Cherry Swash', cursive;
+}
+
+.container {
+	width: 100%; /* change me to a percentage width, like 80% */
+	background-image: url(../images/coverimage.jpg);
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+    background-position:top,center;
+ 
+    background-color: #52271c;
+}
+
+.header {
+	background-color: ;
+	padding: 20px;
+}
+
+a {
+	text-decoration: none;
+	color: white;
+}
+a:hover {
+	color: blue;
+}
+
+#navlist {
+	position: fixed;
+}
+
+#navlist li {
+	display: inline;
+	padding: 10px;
+}
+
+li {
+	list-style-type: none;
+	font-size: 15px;
+}
+
+.main-content {
+	margin-top: 150px;
+	height: 450px;
+}
+
+
+.sidebar, .sub-content, .footer {
+		background-color: transparent;
+}
+
+.sidebar {
+	width: 25%;
+	display: inline;
+
+	float: left;
+	text-align: center;
+	color: white;
+}
+
+.sub-content {
+	width: 25%;
+
+	float: right;
+	color: white;
+	text-align: center;	
+}
+
+.sub-content-2 {
+	width: 50%;
+	float: right;
+}
+
+.footer {
+	clear: both;
+}
+.section2 {
+	background-color: yellow;
+	height: 300px;
+	text-align: center;
+}

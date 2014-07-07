@@ -1,0 +1,57 @@
+<html>
+<head>
+	<title>My Life Line</title>
+</head>
+<body>
+
+    <h1>Describe who you are:</h1>
+
+      <form>
+        Job: <input type="text" id="jobTitle" placeholder="Job Title"><br>
+        Hometown: <input type="text" id="hometown" placeholder="Hometown"><br>
+        Partner's Name: <input type="text" id="partner" placeholder="Partner"><br>
+        Number of Childern: <input type="text" id="children" placeholder="Number of Children"><br><br>
+        <button id="submit">Submit</button>
+      </form>
+        <div id="returnmessage"></div>
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script type="text/javascript">
+/**
+ * @exercise 1 - lifeLine
+ * @description takes children, partner's name, hometown, and job
+ * @returns 'You are a W from X and married to Y  with Z kids.'
+**/
+
+// Create function with name tellFortune and appropriate parameters
+var lifeLine = function( jobTitle, hometown, partner, children ) {
+  // var whateverYouWant = "Youare a" + 
+  // parameters are what you "find"
+  // returning the string is not always preferred
+// get first letter and make it lower case
+  var firstLetter = jobTitle.charAt(0).toLowerCase();
+  if(firstLetter === 'a' || firstLetter === 'e' || firstLetter === 'i' || firstLetter === 'o' || firstLetter === 'u') {
+ 
+          var a = 'an ';
+ 
+      }  else {
+    var a = 'a';
+  }
+
+  var tellFortune = "You are a " + jobTitle + " from " + hometown + " and married to " + partner + " with " + children + " kids.";
+  return tellFortune;
+};
+
+	   $("#submit").on('click', function(e) {
+      e.preventDefault();
+       var jobTitle = $("#jobTitle").val();
+       var hometown = $("#hometown").val();
+       var partner = $("#partner").val();
+       var children = $("#children").val();
+       var message= lifeLine(jobTitle, hometown, partner, children);
+       $("#returnmessage").html(message);
+    });
+
+</script>
+</body>
+</html>
