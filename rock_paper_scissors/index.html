@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Rock, Paper Scissors JSExercise</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+    </head>
+    <body>
+        <!--Rock, Paper Scissors-->
+        <!-- Add your site or application content here -->
+        <p>Rock, Paper and Scissors JS Exercise</p>
+
+        <!--Buttons-->
+        <button id="rock">Rock</button>
+        <button id="paper">Paper</button>
+        <button id="scissors">Scissors</button>
+        <h1 id="decision"></h1>
+
+
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+
+        <!--Event Handler for Scissors-->
+        <script>
+
+        var computerChoice = function() {
+
+        var choice = Math.random();
+
+        if (choice < 0.33) {
+            choice = "rock";
+        }
+        else if (choice <= 0.67) {
+            choice = "paper";
+        }
+        else {
+            choice = "scissors";
+        }
+        return choice;
+        }
+
+        var compare = function(choice1, choice2) {
+
+        if (choice1 === choice2) {
+            return "The result is a tie!";
+        }
+        if (choice1 === "rock") {
+            if (choice2 === "scissors") {
+                return "Rock wins!";
+            } else {
+                return "Paper wins!";
+            }    
+        }
+        if (choice1 === "paper") {
+            if (choice2 === "rock") {
+                return "Paper wins!";
+            } else {
+                return " Scissors wins!"
+            }
+        }
+        if (choice1 === "scissors") {
+            if (choice2 === "paper") {
+                return "Scissors wins!";
+                } else {
+                    return "Rock wins!"
+                }
+            }
+        }
+
+        // ORIGINAL ASK:
+
+            console.time("My kewl timer");
+
+            $('#rock').on('click', function(){
+               var result = compare('rock', computerChoice());
+               $("#decision").html(result);
+            });
+            $('#paper').on('click', function(){
+               var result = compare('paper', computerChoice());
+               $("#decision").html(result);
+            });
+            $('#scissors').on('click', function(){
+               var result = compare('scissors', computerChoice());
+               $("#decision").html(result);
+
+            console.timeEnd("My kewl timer");
+
+        // SHORTENED VERSION
+
+        // console.time("My kewl timer");
+
+        //     $('#rock,#paper,#scissors').on('click', function(){
+        //        var result = compare('rock', computerChoice());
+        //        var result = compare('paper', computerChoice());
+        //        var result = compare('scissors', computerChoice());
+        //        $("#decision").html(result);
+            
+        //     console.timeEnd("My kewl timer");
+
+           });
+        </script>
+
+    </body>
+</html>

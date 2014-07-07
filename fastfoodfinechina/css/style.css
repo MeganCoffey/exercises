@@ -54,10 +54,15 @@ li {
 	height: 450px;
 }
 
+
+.sidebar, .sub-content, .footer {
+		background-color: transparent;
+}
+
 .sidebar {
 	width: 25%;
 	display: inline;
-	background-color: transparent;
+
 	float: left;
 	text-align: center;
 	color: white;
@@ -65,7 +70,7 @@ li {
 
 .sub-content {
 	width: 25%;
-	background-color: transparent;
+
 	float: right;
 	color: white;
 	text-align: center;	
@@ -77,8 +82,6 @@ li {
 }
 
 .footer {
-	background-color: transparent;
-
 	clear: both;
 }
 .section2 {
