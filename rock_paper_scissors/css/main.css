@@ -23,6 +23,32 @@ html {
     line-height: 1.4;
 }
 
+#rock, #paper, #coffey {
+    width: 200px;
+    height: 100px;
+    margin: 10px;
+}
+
+.container {
+
+    text-align: center;
+}
+
+#rock {
+    color: blue;
+    background-color: yellow;
+}
+
+#paper {
+    color: blue;
+    background-color: orange;
+}
+
+#coffey {
+    color: blue;
+    background-color: black;
+}
+
 /*
  * Remove text-shadow in selection highlight: h5bp.com/i
  * These selection rule sets have to be separate.
