@@ -6,7 +6,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Rock, Paper Scissors JSExercise</title>
+        <title>Rock, Paper, Coffey — Javascript/jQuery Exercise</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -19,97 +19,98 @@
     <body>
         <!--Rock, Paper Scissors-->
         <!-- Add your site or application content here -->
-        <p>Rock, Paper and Scissors JS Exercise</p>
 
         <!--Buttons-->
-        <button id="rock">Rock</button>
-        <button id="paper">Paper</button>
-        <button id="scissors">Scissors</button>
-        <h1 id="decision"></h1>
+        <div class="container">
+            <h1>Rock, Paper, Coffey — Javascript/jQuery Exercise</h1>
+            <button class="rps-action" id="rock">Rock</button>
+            <button class="rps-action" id="paper">Paper</button>
+            <button class="rps-action" id="coffey">Coffey</button>
+            <h1 id="decision"></h1>
+        </div>
 
 
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
 
-        <!--Event Handler for Scissors-->
         <script>
 
         var computerChoice = function() {
 
-        var choice = Math.random();
+            var choice = Math.random();
 
-        if (choice < 0.33) {
-            choice = "rock";
-        }
-        else if (choice <= 0.67) {
-            choice = "paper";
-        }
-        else {
-            choice = "scissors";
-        }
-        return choice;
-        }
+            if (choice >= 0 && choice <= 0.33) {
+                choice = "rock";
+            }
+            else if (choice <= 0.67 && choice > .033) {
+                choice = "paper";
+            }
+            else {
+                choice = "coffey";
+            }
+            return choice;
+        };
 
         var compare = function(choice1, choice2) {
 
-        if (choice1 === choice2) {
-            return "The result is a tie!";
-        }
-        if (choice1 === "rock") {
-            if (choice2 === "scissors") {
-                return "Rock wins!";
-            } else {
-                return "Paper wins!";
-            }    
-        }
-        if (choice1 === "paper") {
-            if (choice2 === "rock") {
-                return "Paper wins!";
-            } else {
-                return " Scissors wins!"
+            if (choice1 === choice2) {
+                return "The result is a tie!";
             }
-        }
-        if (choice1 === "scissors") {
-            if (choice2 === "paper") {
-                return "Scissors wins!";
+            if (choice1 === "rock") {
+                if (choice2 === "coffey") {
+                    return "Rock wins!";
                 } else {
-                    return "Rock wins!"
+                    return "Paper wins!";
+                }    
+            }
+            if (choice1 === "paper") {
+                if (choice2 === "rock") {
+                    return "Paper wins!";
+                } else {
+                    return "Coffey wins!"
                 }
             }
-        }
+            if (choice1 === "coffey") {
+                if (choice2 === "paper") {
+                    return "Coffey wins!";
+                    } else {
+                        return "Rock wins!"
+                    }
+            }
+        };
 
         // ORIGINAL ASK:
 
-            console.time("My kewl timer");
+        // <!--Event Handlers-->
 
-            $('#rock').on('click', function(){
-               var result = compare('rock', computerChoice());
-               $("#decision").html(result);
-            });
-            $('#paper').on('click', function(){
-               var result = compare('paper', computerChoice());
-               $("#decision").html(result);
-            });
-            $('#scissors').on('click', function(){
-               var result = compare('scissors', computerChoice());
-               $("#decision").html(result);
+            // $('#rock').on('click', function(){
+            //    var result = compare('rock', computerChoice());
+            //    $("#decision").html(result);
+            // });
+            // $('#paper').on('click', function(){
+            //    var result = compare('paper', computerChoice());
+            //    $("#decision").html(result);
+            // });
+            // $('#coffey').on('click', function(){
+            //    var result = compare('coffey', computerChoice());
+            //    $("#decision").html(result);
+            // });
 
-            console.timeEnd("My kewl timer");
 
         // SHORTENED VERSION
 
-        // console.time("My kewl timer");
+        console.time("My kewl timer");
 
-        //     $('#rock,#paper,#scissors').on('click', function(){
-        //        var result = compare('rock', computerChoice());
-        //        var result = compare('paper', computerChoice());
-        //        var result = compare('scissors', computerChoice());
-        //        $("#decision").html(result);
+            $(".rps-action").on('click', function(){
+                var cc = computerChoice();
+                console.log("computer", cc);
+                console.log("user", this.id);
+               var result = compare(this.id, cc);
+               $("#decision").html(result);
             
-        //     console.timeEnd("My kewl timer");
-
-           });
+            console.timeEnd("My kewl timer");
+});
         </script>
 
     </body>

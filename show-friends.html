@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Show Friends</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+    	<!-- Buttons -->
+    <input id="addFriend" placeholder="Name">
+    <button id="addFriend">Add Friend</button>
+
+        <!-- Add your site or application content here -->
+
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+            <script type="text/javascript">
+
+
+        // Add the names of everyone at your table   
+var friends = ['Megan', 'Brett', 'James', 'Lana', 'Amanda'];
+
+var list = "<ol>"
+
+// Create your for loop here
+// HINT: the string should look like '<li>' + friends[i] + "</li>" + ....
+    
+
+// var createList = function(){
+ for(i=0; i < friends.length; i++) {
+  list += '<li>'+friends[i]+ '</li>'
+
+}
+
+list = list + '</li>'
+
+
+$("body").append(list);
+
+
+            //$("#submitInput").on('click', function() {
+            //      var createList = $("#friendName").val(); 
+                  
+
+            //};
+
+
+        </script>
+
+    </body>
+</html>
