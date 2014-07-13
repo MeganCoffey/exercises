@@ -18,12 +18,10 @@ font-family: 'Cherry Swash', cursive;
 	background-attachment: fixed;
 	background-repeat: no-repeat;
     background-position:top,center;
- 
     background-color: #52271c;
 }
 
 .header {
-	background-color: ;
 	padding: 20px;
 }
 
@@ -36,17 +34,24 @@ a:hover {
 }
 
 #navlist {
-	position: fixed;
+	margin: 0 auto;
+	text-align: center; 
 }
 
 #navlist li {
 	display: inline;
 	padding: 10px;
+	list-style-type: none;
+	font-size: 20px;
 }
 
 li {
 	list-style-type: none;
 	font-size: 15px;
+}
+
+h1 {
+	margin: 0 auto;
 }
 
 .main-content {
@@ -85,7 +90,8 @@ li {
 	clear: both;
 }
 .section2 {
-	background-color: yellow;
+	background-color: transparent;
+	background-image: url(../images/tablecloth.jpg);
 	height: 300px;
 	text-align: center;
 }
