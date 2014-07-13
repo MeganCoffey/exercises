@@ -11,18 +11,19 @@
 }
 
 
-.main-content {
-		overflow: auto;
+.main-content:after {
+	content: " ";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	height: 0;
 }
-/* hint! what do you need to add here? */
 
 .widget {
 	float: left;
 	/* what happens when you change float left to float right? why? */
 }
 .widget.tall {
-
-
 
 }
 
