@@ -5,8 +5,12 @@
 
 /* Example 11 */
 
-.header {
-	overflow: auto;
+.header:after {
+	content: " ";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	height: 0;
 }
 
 .logo {
@@ -19,11 +23,12 @@
 	float: right;
 }
 
-.main-content {}
-/* hint! */
-
-.post {
-	overflow: auto;
+.post:after {
+	content: " ";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	height: 0;
 }
 
 .image {
@@ -35,5 +40,5 @@
 
 .post_excerpt {
 	width: 75%;
-		float: right;
+	float: right;
 }

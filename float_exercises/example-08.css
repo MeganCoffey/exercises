@@ -10,24 +10,11 @@
 	margin: 0 auto;
 }
 
-.header {
-
-}
-
-
 .sidebar, .main-content, .sub-content {
 	height: 300px;
 	float: left;
 	width: 33.3%;
 }
-.sidebar {
-
-}
-
-.main-content {}
-
-.sub-content {}
-
 
 .footer {
 	clear: both;

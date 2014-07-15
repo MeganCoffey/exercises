@@ -10,11 +10,16 @@
 	margin: 0 auto;
 }
 
-.header {}
-/* hint! what do you have to add here? */
-
-.header {
+/*.header {
 	overflow: auto;
+}*/
+
+.header:after {
+    content: " ";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    height: 0;
 }
 
 .logo {
@@ -33,8 +38,16 @@
 	float: left;
 }
 
-.main-content {
+/*.main-content {
 	overflow: auto;
+}*/
+
+.main-content:after {
+	content: " ";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	height: 0;
 }
 
 .sub-content {
