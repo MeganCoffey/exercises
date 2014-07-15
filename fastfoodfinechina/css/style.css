@@ -12,6 +12,48 @@ body {
 font-family: 'Cherry Swash', cursive;
 }
 
+.form {
+	text-align: center;
+	background-color: #bae4e2;
+	margin-left: 50px;
+	margin-right: 50px;
+}
+
+input.ss-q-short {
+	border-color: #e7e7e7;
+	height: 30px;
+	width: 250px;
+}
+
+#ss-submit {
+	font-family: 'Cherry Swash', cursive;
+	background-color: black;
+	border: 0;
+	color: white;
+	padding: 15px;
+	margin: 20px;
+	width: 200px;
+}
+
+.intro {
+	padding-top: 35px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.intro a {
+	color: blue;
+}
+
+.ss-item {
+	text-align: center;
+}
+
+.ss-q-title {
+	padding-top: 20px;
+	font-size: 30px;
+}
+
 .container {
 	width: 100%; /* change me to a percentage width, like 80% */
 	background-image: url(../images/coverimage.jpg);
@@ -19,6 +61,7 @@ font-family: 'Cherry Swash', cursive;
 	background-repeat: no-repeat;
     background-position:top,center;
     background-color: #52271c;
+    height: 550px;
 }
 
 .header {
@@ -89,9 +132,180 @@ h1 {
 .footer {
 	clear: both;
 }
-.section2 {
-	background-color: transparent;
+
+#menu {
+	background-color: white;
+}
+
+#RSVP {
+	padding-bottom: 50px;
 	background-image: url(../images/tablecloth.jpg);
-	height: 300px;
+	height: auto;
 	text-align: center;
 }
+
+
+#MENU {
+	padding-bottom: 50px;
+	background-image: url(../);
+	text-align: center;
+}
+
+#MENU:after {
+	content: " ";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	height: 0;
+}
+
+#logos {
+	margin-left: 5%;
+	margin-right: 5%;
+}
+
+#logos:after {
+	content: " ";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	height: 0;
+}
+
+.burgersanddogs:after {
+	content: " ";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	height: 0;
+}
+
+.widget {
+	float: left;
+	background: #BB326B;
+	margin: 10px;
+	width: 100px;
+	height: 100px;
+	font-size: 36px;
+	text-align: center;
+	padding-top: 75px;
+}
+
+.widget.one {
+	background-image: url(../images/mcdonalds.jpg);
+	background-size: contain;
+}
+
+.widget.two {
+	background-image: url(../images/arbys.jpg);
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+.widget.three {
+	background-image: url(../images/dq.jpg);
+	background-size: contain;
+}
+
+.widget.four {
+	background-image: url(../images/inandoutburger.jpg);
+	background-size: contain;
+}
+
+.widget.five {
+	background-image: url(../images/mightfine.jpg);
+	background-size: contain;
+}
+
+.widget.six {
+	background-image: url(../images/sonic.jpg);
+	background-size: contain;
+}
+
+.widget.seven {
+	background-image: url(../images/pterrys.jpg);
+	background-size: contain;
+}
+
+.widget.eight {
+	background-image: url(../images/wendys.jpg);
+	background-size: contain;
+}
+
+.widget.nine {
+	background-image: url(../images/whataburger.jpg);
+	background-size: contain;
+}
+
+.widget.ten {
+	background-image: url(../images/wienerschnitzel.jpg);
+	background-size: contain;
+}
+
+.widget.eleven {
+	background-image: url(../images/chickfila.jpg);
+	background-size: contain;
+}
+
+.widget.twelve {
+	background-image: url(../images/pluckers.jpg);
+	background-size: contain;
+}
+
+.widget.thirteen {
+	background-image: url(../images/popeyes.jpg);
+	background-size: contain;
+}
+
+.widget.fourteen {
+	background-image: url(../images/kfc.jpg);
+	background-size: contain;
+}
+
+.widget.fifthteen {
+	background-image: url(../images/raisingcanes.jpg);
+	background-size: contain;
+}
+
+.widget.sixteen {
+	background-image: url(../images/tacobell.jpg);
+	background-size: contain;
+}
+
+.widget.seventeen {
+	background-image: url(../images/tacocabana.jpg);
+	background-size: contain;
+}
+
+
+.line-separator {
+	border-bottom:1px solid gray;
+	margin-left: 35%;
+	margin-right: 35%;
+	padding-top: 20px;
+}
+
+#VOTE {
+	padding-bottom: 50px;
+	background-image: url(../images/15221-french-fries-1920x1200-photography-wallpaper.jpg);
+	text-align: center;
+}
+
+/*.poll {
+	float: left;
+
+}
+
+.vote {
+	background-color: white;
+	margin-left: 10%;
+	margin-right: 10%;
+}
+
+.vote:after {
+	content: " ";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	height: 0;
+}*/
