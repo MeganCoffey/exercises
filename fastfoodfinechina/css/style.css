@@ -15,8 +15,8 @@ font-family: 'Cherry Swash', cursive;
 .form {
 	text-align: center;
 	background-color: #bae4e2;
-	margin-left: 50px;
-	margin-right: 50px;
+	margin-left: 25px;
+	margin-right: 25px;
 }
 
 input.ss-q-short {
@@ -43,6 +43,7 @@ input.ss-q-short {
 
 .intro a {
 	color: blue;
+
 }
 
 .ss-item {
@@ -56,7 +57,7 @@ input.ss-q-short {
 
 .container {
 	width: 100%; /* change me to a percentage width, like 80% */
-	background-image: url(../images/coverimage.jpg);
+	background-image: url(../images/2ndannual.jpg);
 	background-attachment: fixed;
 	background-repeat: no-repeat;
     background-position:top,center;
@@ -72,9 +73,9 @@ a {
 	text-decoration: none;
 	color: white;
 }
-a:hover {
-	color: blue;
-}
+/*a:hover {
+	color: #62dddd;
+}*/
 
 #navlist {
 	margin: 0 auto;
@@ -85,7 +86,7 @@ a:hover {
 	display: inline;
 	padding: 10px;
 	list-style-type: none;
-	font-size: 20px;
+	font-size: 15px;
 }
 
 li {
@@ -95,7 +96,10 @@ li {
 
 h1 {
 	margin: 0 auto;
+
 }
+
+
 
 .main-content {
 	margin-top: 150px;
@@ -108,12 +112,40 @@ h1 {
 }
 
 .sidebar {
-	width: 25%;
-	display: inline;
-
-	float: left;
 	text-align: center;
 	color: white;
+	width: 25%;
+	display: inline;
+	float: left;
+}
+@media screen and (max-width: 1000px) {
+	.sidebar {
+		display: none;
+	}
+
+	.sub-content {
+		display: none;
+	}
+
+	#logos {
+	margin-left: 5%;
+	margin-right: 5%;
+}
+
+}
+@media screen and (min-width: 1001px) {
+	.sidebar {
+		display: block;
+	}
+	.sub-content {
+		display: block;
+	}
+
+	#logos {
+	margin-left: 25%;
+	margin-right: 25%;
+}
+
 }
 
 .sub-content {
@@ -159,10 +191,10 @@ h1 {
 	height: 0;
 }
 
-#logos {
-	margin-left: 5%;
-	margin-right: 5%;
-}
+/*#logos {
+	margin-left: 25%;
+	margin-right: 25%;
+}*/
 
 #logos:after {
 	content: " ";
@@ -287,13 +319,25 @@ h1 {
 
 #VOTE {
 	padding-bottom: 50px;
-	background-image: url(../images/15221-french-fries-1920x1200-photography-wallpaper.jpg);
 	text-align: center;
 }
 
-/*.poll {
-	float: left;
+#PICS {
 
+		text-align: center;
+}
+
+#PICS {
+	width: 100%; /* change me to a percentage width, like 80% */
+	background-image: url(../images/tablecloth.jpg);
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+    background-position:top,center;
+}
+
+.poll {
+	float: left;
+	padding-right: 5px;
 }
 
 .vote {
@@ -308,4 +352,12 @@ h1 {
 	clear: both;
 	visibility: hidden;
 	height: 0;
-}*/
+}
+
+#ss-submit:hover {
+	background-color: gray;
+}
+
+#ss-submit:visited {
+	background-color: green;
+}
